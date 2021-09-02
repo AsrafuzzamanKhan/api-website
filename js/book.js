@@ -16,7 +16,7 @@ const searchBook = () => {
     //get search item
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
-    //console.log(searchText);
+   
 
     //clear search field text
     searchField.value = '';
@@ -28,7 +28,7 @@ const searchBook = () => {
     //if there is any search item
     else {
         const url = `https://openlibrary.org/search.json?q=${searchText}`;
-        //console.log(url);
+    
         fetch(url)
             .then(res => res.json())
             .then(data => displaySearchBook(data))
@@ -42,7 +42,7 @@ const searchBook = () => {
 
 //display search book function
 const displaySearchBook = data => {
-    //console.log(data);
+    
 
     //get search result
     const searchResult = document.getElementById('search-result');
@@ -67,7 +67,7 @@ const displaySearchBook = data => {
         totalNum.appendChild(h3);
 
         //fetch every book info by forEach loop
-        // const dataDocs = data.docs;
+        
         data.docs?.forEach(book => {
 
             const div = document.createElement('div');
