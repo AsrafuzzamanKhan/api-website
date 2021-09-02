@@ -67,7 +67,7 @@ const displaySearchBook = data => {
         totalNum.appendChild(h3);
 
         //fetch every book info by forEach loop
-
+        // const dataDocs = data.docs;
         data.docs.forEach(book => {
 
             const div = document.createElement('div');
